@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="cal" id="value1" class="value1"><br><br>
+    <input type="text" name="cal" id="value2" class="value2"><br><br>
+
+    <button onclick="answer(this)">Add</button>
+    <button onclick="answer(this)">Sub</button>
+    <button onclick="answer(this)">Multi</button>
+    <button onclick="answer(this)">Divide</button>
+    <button onclick="answer(this)">=</button>
+
+</body>
+
+</html>
+
+<script>
+    function answer(e) {
+        let a = document.getElementById("value1").value;
+        let b = document.getElementById("value2").value;
+
+        // (1)Add +
+        console.log(parseInt(a) + parseInt(b));
+        // alert(parseInt(a) + parseInt(b));
+
+        // (2)sub *
+        // console.log(parseInt(a) * parseInt(b));
+        // alert(parseInt(a) * parseInt(b));
+
+        // (3)Multi -
+        // console.log(parseInt(a) - parseInt(b));
+        // alert(parseInt(a) - parseInt(b));
+
+        // (4)Divide /
+        // console.log(parseInt(a) / parseInt(b));
+        // alert(parseInt(a) / parseInt(b));
+    }
+
+</script>

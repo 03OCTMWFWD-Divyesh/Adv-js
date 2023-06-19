@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript class (22-04-23)</title>
+</head>
+<body>
+    <h1>JavaScript Class.</h1>
+    <p>javascript constructor.</p>
+</body>
+</html>
+  <script>
+    // * Function :-
+
+    // ------> object oriented :
+    // ------> object oriented programming :
+    // ------> paradigm based on object : 
+    
+
+    // * Features :-
+    // Data : properties.
+    // Method :
+
+
+
+
+
+
+    // * Class :-
+
+    // user {                                          // user => Class.
+    //     name                                    
+    //     age                                         // name, age, salary => property and object.
+    //     salary
+    // }
+
+    // phone {
+    //     home(){
+
+    //     }
+    //     play
+    //     rearcamera
+    //     frontcamera
+    // }
+
+    // * Four pillers of oops :-
+        // (1) Abstraction.
+        // (2) Encapsulation.
+        // (3) Inheritance.
+
+        // (4) Polymorphism :-
+                // add (name);
+                // add (name, age);
+                // add (name, age, salary);
+
+
+
+
+        
+        // * Class :-
+
+        // class Animal {
+        //     display(){
+        //         console.log("This is animal class");
+        //     }
+        // }
+        // const obj = new Animal();
+        // obj.display();
+
+
+        // class Animal {
+        //     detailsanimal(name, age){
+        //         console.log(`name of animal ${name} age ${age}`);
+        //     }
+        // }
+        // const obj = new Animal();
+        // obj.detailsanimal("Tommy", 7);
+
+
+        // class Animal {
+        //     constructor(name, age){
+        //         console.log(`name of animal ${name} age ${age}`);
+        //     }
+        // }
+        // const obj = new Animal("Ricky", 5);
+
+
+
+
+        // * Constructor => Default constructor.
+
+            // class shape {
+            //     constructor(){
+            //         console.log("This is default vonstructor.");
+            //     }
+            // }
+            // const obj = new shape ();
+
+
+            // class shape {
+            //     constructor(l, b){
+            //         let length = l;
+            //         let breath = b;
+            //         let area = length * breath;
+            //         console.log(`area of rectangle ${area}`);
+            //     }
+            // }
+            // const obj = new shape(25, 25);
+
+
+            // class shape{
+            //     constructor(l, b ,h){
+            //         this.l = l;
+            //         this.b = b;
+            //         this.h = h;
+            //         let vol = l * b * h;
+            //         console.log(`volume of cuboid is ${vol}`);
+            //     }
+            // }
+            // const obj = new shape (1, 2, 3);
+
+
+            class employee {
+                constructor(name, age, salary){
+                    this.name = name;
+                    this.age = age;
+                    this.salary = salary;
+                }
+                displaydetails(){
+                    console.log(`Details of employee is :`);
+                    console.log(`Welcome ${this.name} age ${this.age} and salary ${this.salary}`);
+                }
+            }
+            const obj = new employee ("king", 34, 1000000000);
+            obj.displaydetails();
+  </script>

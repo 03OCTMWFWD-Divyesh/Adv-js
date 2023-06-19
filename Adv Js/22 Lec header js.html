@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script (06-04-23)</title>
+</head>
+
+<body>
+
+    <h1>Header & footer Create by java script.</h1>
+
+</body>
+
+</html>
+
+
+<script>
+
+    function x() {
+        document.body.style.margin = "0 auto";
+
+        const header = document.createElement('header');
+        document.body.appendChild(header);
+
+        const nav = document.createElement('nav');
+        header.appendChild(nav);
+        nav.style.backgroundColor = "white";
+        nav.style.borderBottom = "1px #ececec";
+        nav.style.boxShadow = "0px 2px 15px 5px #f5f5f5";
+
+        const pdiv = document.createElement('div');
+        nav.appendChild(pdiv);
+        pdiv.style.display = "flex";
+        pdiv.style.justifyContent = "space-around";
+        pdiv.style.alignItems = "center";
+        // pdiv.style.border = "1px solid";
+        pdiv.style.paddingTop = "20px";
+        pdiv.style.paddingBottom = "20px";
+
+        let cname = ['c1', 'c2']
+        for (let i = 0; i < cname.length; i++) {
+            let cdiv = document.createElement('div');
+            cdiv.className = cname[i];
+            pdiv.appendChild(cdiv);
+            // cdiv.style.border = "1px solid";
+
+            if (cdiv.className == 'c1') {
+                cdiv.innerHTML = '<img src="myntra.png" style="width: 60px;">';
+                cdiv.style.display = "flex";
+                cdiv.style.alignItems = "center";
+
+                let buttons = ['MEN', 'WOMEN', 'KIDS', 'HOME & LIVING', 'BEAUTY', 'STUDIO'];
+                for (let j = 0; j < buttons.length; j++) {
+                    let div1 = document.createElement('div');
+                    const anchors = document.createElement('span');
+                    // anchors.attributes = 'href'
+                    anchors.innerHTML = `&nbsp; <a href="#" style="text-decoration: none; color: black;"><strong>${buttons[j]}</strong></a> &nbsp;`;
+                    if (buttons[j] == 'STUDIO') {
+                        anchors.innerHTML = `&nbsp; <a href="#" style="text-decoration: none; color: black;"><strong>STUDIO<sup style="font-size: 9px; color: #e75480;">&nbsp; NEW</sup></strong></a> &nbsp;`;
+                    }
+                    anchors.style.marginLeft = '20px';
+                    anchors.style.paddingTop = '5px';
+                    anchors.style.paddingBottom = '5px';
+                    anchors.style.fontSize = '13px';
+                    anchors.style.fontFamily = 'sans-serif'
+                    cdiv.appendChild(div1);
+                    div1.appendChild(anchors);
+                    // div1.style.display = "flex";
+                }
+            }
+            else if (cdiv.className == 'c2') {
+                const srch = document.createElement('div');
+                srch.className = 'search';
+                const profile = document.createElement('div');
+                profile.className = 'profile';
+                const wishlist = document.createElement('div');
+                wishlist.className = 'wishlist';
+                const bag = document.createElement('div');
+                bag.className = 'bag';
+
+                const s1 = document.createElement('div');
+                const s2 = document.createElement('div');
+                srch.appendChild(s1);
+                srch.appendChild(s2);
+                // srch.style.border = "1px solid";
+                srch.style.display = "flex";
+                srch.style.alignItems = "center";
+                srch.style.backgroundColor = "#f5f5f5";
+                srch.style.paddingTop = "4px";
+                srch.style.paddingBottom = "4px";
+
+                s1.innerHTML = '<i class="fa-solid fa-magnifying-glass" style="padding: 7px 18px 7px 12px; color: gray;"></i>';
+                s2.innerHTML = '<input type="search" placeholder="Search for products, brands and more" style="width: 290px; border: none; background-color: #f5f5f5; outline: none;">';
+
+                const pa1 = document.createElement('div');
+                const p1 = document.createElement('div');
+                const p2 = document.createElement('div');
+                profile.appendChild(pa1);
+                pa1.style.justifyContent = "center";
+                pa1.style.marginLeft = "28px";
+                pa1.appendChild(p1);
+                pa1.appendChild(p2);
+
+
+                p1.innerHTML = '<a href="#" style="text-decoration: none; color: black;"><i class="fa-regular fa-user"></i></a>';
+                p1.style.textAlign = 'center'
+                p2.innerHTML = '<a href="#" style="text-decoration: none; color: black;"><b>Profile</b></a>';
+                p2.style.fontSize = '12px';
+                p2.style.fontFamily = 'sans-serif';
+
+
+                const wa1 = document.createElement('div');
+                const w1 = document.createElement('div');
+                const w2 = document.createElement('div');
+                wishlist.appendChild(wa1);
+                wa1.style.justifyContent = "center";
+                wa1.style.marginLeft = "25px";
+                wa1.appendChild(w1);
+                wa1.appendChild(w2);
+
+
+                w1.innerHTML = '<a href="#" style="text-decoration: none; color: black;"><i class="fa-regular fa-heart"></i></a>';
+                w1.style.textAlign = 'center'
+                w2.innerHTML = '<a href="#" style="text-decoration: none; color: black;"><b>Wishlist</b></a>';
+                w2.style.fontSize = '12px';
+                w2.style.fontFamily = 'sans-serif';
+
+
+                const ba1 = document.createElement('div');
+                const b1 = document.createElement('div');
+                const b2 = document.createElement('div');
+                bag.appendChild(ba1);
+                ba1.style.justifyContent = "center";
+                ba1.style.marginLeft = "25px";
+                ba1.appendChild(b1);
+                ba1.appendChild(b2);
+
+
+                b1.innerHTML = '<a href="#" style="text-decoration: none; color: black;"><i class="fa-solid fa-bag-shopping"></i></a>';
+                b1.style.textAlign = 'center'
+                b2.innerHTML = '<a href="#" style="text-decoration: none; color: black;"><b>Bag</b></a>';
+                b2.style.fontSize = '12px';
+                b2.style.fontFamily = 'sans-serif';
+
+                cdiv.appendChild(srch);
+                cdiv.appendChild(profile);
+                cdiv.appendChild(wishlist);
+                cdiv.appendChild(bag);
+                cdiv.style.display = 'flex';
+                cdiv.style.alignItems = 'center';
+            }
+        }
+    }
+    x();
+
+</script>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script (06-04-23)</title>
+</head>
+<body>
+    <h1>Header & footer Create by java script.</h1>
+
+    <ul id="header">
+
+    </ul>
+</body>
+</html>
+
+
+<script>
+
+    // const nav = document.createElement("nav");
+    // document.body.appendChild(nav);
+    // nav.style.background = "black";
+    // nav.style.padding = "15px 0px 15px 0px";
+    // nav.style.color = "red";
+    // nav.textContent = "Men";
+    // // nav.textContent = "Woman";
+
+
+
+
+
+
+    // * Function :-
+
+    function setheader (name){
+        const li = document.createElement('li');
+        li.textContent = name;
+        return li;
+    }
+    // let ul = document.getElementById('header')
+    let menu = document.querySelector("#header");
+    menu.appendChild(setheader("Home"));
+    menu.appendChild(setheader("About"));
+    menu.appendChild(setheader("Service"));
+    menu.appendChild(setheader("Contact Us"));
+
+
+</script>

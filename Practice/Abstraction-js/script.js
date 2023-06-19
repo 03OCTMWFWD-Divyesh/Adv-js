@@ -1,0 +1,1 @@
+alert("Abstraction in javascript");

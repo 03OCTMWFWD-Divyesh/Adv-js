@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map, Filter & Reduce (20-04-23)</title>
+</head>
+
+<body>
+    <h1>Map, Filter, Reduce in javascript.</h1>
+    <ol>
+        <p>Loop :-</p>
+        <li>While</li>
+        <li>for</li>
+        <li>do....while</li>
+        <li>for in</li>
+        <li>for of</li>
+    </ol>
+
+    <ol>
+        <p>Arrow Method :-</p>
+        <li>Map</li>
+        <li>Filter</li>
+        <li>Reduce</li>
+    </ol>
+</body>
+
+</html>
+
+
+<script>
+    const companies = [
+        { name: "company one", category: "finanace", start: 1981, end: 2003 },                                      // Arr :- object literal Arr. mtlb property and value (property = name, value = company one.) prototype = object.
+        { name: "company Two", category: "Retail", start: 1992, end: 2008 },
+        { name: "company Three", category: "Auto", start: 1999, end: 2007 },
+        { name: "company Four", category: "Retail", start: 1989, end: 2010 },
+        { name: "company Five", category: "Technology", start: 2009, end: 2014 },
+        { name: "company Six", category: "Finanace", start: 1987, end: 2010 },
+        { name: "company Seven", category: "Auto", start: 1986, end: 1996 },
+        { name: "company Eight", category: "Technology", start: 2011, end: 2016 },
+        { name: "company Nine", category: "Retail", start: 1981, end: 1989 },
+    ];
+
+    const ages = [33, 12, 20, 16, 05, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];                                  // Arr :- Simple Arr. (prototype = object.)
+
+
+    // const retailcompanies = companies.filter(company => company.category === "Retail");
+    // console.log(retailcompanies);                                                                            // Arrow Function.
+
+    // const companyage = companies.filter(company => company.end - company.start <= 10);
+    // console.log(companyage);
+
+
+
+
+
+    // const retailcompanies = companies.filter (function(company){                                             // callback function.
+    //     return company.category === 'Retail';                                                                      
+    // });
+    // console.log(retailcompanies);
+
+
+    const age = ages.reduce (function(total, age){
+        return total + age;
+    }, 0);
+    console.log(age);
+
+</script>

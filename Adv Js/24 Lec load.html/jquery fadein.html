@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery fadein (11-04-23)</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+
+    <style>
+        span {
+            color: red;
+            cursor: pointer;
+        }
+
+        div {
+            margin: 3px;
+            width: 100px;
+            /* display: none; */
+            height: 100px;
+            float: left;
+        }
+
+        #one {
+            background: red;
+        }
+
+        #two {
+            background: black;
+        }
+
+        #three {
+            background: yellow;
+        }
+
+        #four {
+            background: orange;
+        }
+
+        #five {
+            background: green;
+        }
+
+        #six {
+            background-color: cornflowerblue;
+        }
+
+        #seven {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <span>Click Here</span>
+    <div id="one"></div>
+    <div id="two"></div>
+    <div id="three"></div>
+    <div id="four"></div>
+    <div id="five"></div>
+    <div id="six"></div>
+    <div id="seven"></div>
+</body>
+
+</html>
+
+<script>
+    $(document.body).click(function () {
+        $("div:hidden").first().fadeIn("slow");
+    });
+</script>

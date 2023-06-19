@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance JavaScript For React. (18-03-23)</title>
+</head>
+
+<body>
+    <h1>Advance javaScript For React.</h1>
+</body>
+
+</html>
+
+
+<script>
+    // * Arrow Function :-
+    // (1) Map.
+    // (2) Filter.
+    // (3) Reduce.
+
+
+
+    // * Loops :-
+    // (1) While.
+    // (2) For.
+    // (3) do...while loop.
+    // (4) For in :- object Literals.................New Loop Advance JavaScript.
+    // (5) For Of :- Array, String...Etc.......................New Loop Advance JavaScript.
+
+
+
+
+    // * Function :-
+
+    // function additionnumbers (x, y, z)
+    // {
+    //     return x+y+z;
+    // }
+    // let res = additionnumbers (25, 24, 26);
+    // console.log(`Addition number ares : ${res}`);
+
+
+
+    // * Variable select Kari Ne Function :-
+
+    // const res = function (x, y, z)
+    // {
+    //     return x+y+z;
+    // }
+    // console.log(res(25, 24, 26));
+
+
+
+
+
+    // * Arrow Function :-
+
+    // const res = (x, y, z) => x+y+z;
+
+    // console.log(res(25, 24, 27));
+
+
+
+
+
+    // * For in Loop :- 
+
+    // const book = {
+    //     title : 'last Eve',
+    //     author : 'Dk',
+    //     year : '2002',
+    // };
+    // for (const i in book)
+    // {
+    //     console.log(`${i} : ${book[i]}`);
+    // };
+
+
+
+    // * For Of Loop :-
+
+    // const arr = ['Apple', 'mango', 'Orange', 'bannana'];
+    // for (const n of arr)
+    // {
+    //     console.log(n);
+    // }
+
+
+
+    // * For in :-
+
+    // const arr = ['Apple', 'mango', 'Orange', 'bannana']
+    // for (const i in arr) {
+    //     console.log(i);
+    // }
+
+
+
+
+
+    // const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    // for (const i of arr)
+    // {
+    //     console.log(i);
+    //     if(i%2==0)
+    //     {
+    //         console.log(i);
+    //     }
+    //     if(i%2==1)
+    //     {
+    //         console.log(i);
+    //     }
+    // };
+
+
+
+
+
+    // * Map :-
+
+
+    // const arr = [64, 256, 324, 500,];
+
+    // const m = arr.map(r => r%2 ==0);
+    // console.log(m);
+
+    // const m = arr.map(r => r+2);                                            // x=2 = arr[64+2=64....]
+    // console.log(m);
+
+
+
+
+
+    // const arr = [64, 256, 324, 500, 864, 880, 1000];
+    // const res = arr.map(r => Math.sqrt(r));                                 // r, arr, res = variabel.. 
+    // console.log(res);
+
+
+    // const arr = ['appple', 'mango', 'orange', 'bannana'];
+
+    // const res = arr.map(r => r.length > 7);                                        // False.
+    // console.log(res);
+
+
+    // const res1 = arr.map(r => r.length > 4);                                        // True.
+    // console.log(res1);
+
+
+
+
+
+
+    // * Filter :-
+
+
+    // const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+    // const v = arr.filter(r => r > 6);
+    // console.log(v);                                                                     // filter :- number batavshe.
+
+    // const k = arr.map(r=>r>6);
+    // console.log(k);                                                                     // Map :- True, False batavshe.
+
+    // const v = arr.filter(r => r % 2 == 0);
+    // console.log(v);
+
+    // const v = arr.filter(r => r % 2 == 1);
+    // console.log(v);
+
+
+
+
+
+    const arr =['apple', 'mango', 'orange', 'bannana'];
+    const v = arr.filter(r=>r.length>5);
+    console.log(v);
+
+
+</script>

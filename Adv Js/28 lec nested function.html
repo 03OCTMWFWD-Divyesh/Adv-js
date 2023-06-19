@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Function in JavaScript. (20-04-23)</title>
+</head>
+
+<body>
+    <h1>Nested Function In JavaScript.</h1>
+</body>
+
+</html>
+
+<script>
+
+    // * Nested function & prototypes :-
+
+    // object oriented programming :-
+
+    // Scoped :- global scoped, block scoped, function scoped.
+
+
+
+
+    let x = 18;                                                             // global scoped.
+    function display() {
+        let y = 49;                                                         // function scoped.
+        function show() {
+            let z = 24;                                                     // blocked scoped.
+            console.log(x, y, z);
+        }
+        show();
+    }
+    display();
+
+
+
+
+    // * Function and the operator :-
+    // * Constructor :- intialize the object of class.
+
+
+    function employeedetails (name, age){
+        this.name = name;
+        this.age = age;
+    }
+
+    const obj = new employeedetails ("virat", 34);
+    console.log(obj);
+
+</script>

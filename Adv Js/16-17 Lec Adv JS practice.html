@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance JavaScript For React (21-03-23)</title>
+</head>
+
+<body>
+    <h1>Name category Start End.</h1>
+</body>
+
+</html>
+
+
+<script>
+
+    // Example :- 1
+
+    // const king = {
+    //     name : 'wrogn', category : 'a', start : '1870', end : '2090',
+    //     name : 'puma', category : 'b', start : '1871', end : '2091',
+    //     name : 'jio', category : 'c', start : '1872', end : '2092',
+    //     name : 'airtel', category : 'd', start : '1870', end : '2093',
+    //     name : 'byjues', category : 'e', start : '1873', end : '2094',
+    //     name : 'vi', category : 'f', start : '1874', end : '2095',
+    //     name : 'tata', category : 'g', start : '1875', end : '2096',
+    //     name : 'oppo', category : 'h', start : '1876', end : '2097',
+    //     name : 'mi', category : 'i', start : '1877', end : '2098',
+    //     name : 'iphone', category : 'j', start : '1878', end : '2099',
+
+    // }
+    // for (const d in king) {
+    //     console.log(`${d} : ${king[d]}`);
+    //     // console.log(king);
+    // }
+
+
+
+
+
+    // Example :- 2
+
+    // const king = [
+    //     { name: 'wrogn', category: 'cloth', start: '1980', end: '2002' },
+    //     { name: 'puma', category: 'finance', start: '1999', end: '2023' },
+    //     { name: 'jio', category: 'network', start: '1990', end: '2000' },
+    //     { name: 'airtel', category: 'internet', start: '2000', end: '2007' },
+    //     { name: 'byjus', category: 'education', start: '1998', end: '2010' },
+    //     { name: 'vi', category: 'technology', start: '2020', end: '2023' },
+    //     { name: 'tata', category: 'finance', start: '1999', end: '2023' },
+    //     { name: 'oppo', category: 'automobile', start: '2001', end: '2012' },
+    //     { name: 'mi', category: 'automobile', start: '1995', end: '2015' },
+    //     { name: 'apple', category: 'automobile', start: '2002', end: '2017' },
+    // ]
+
+    // for (const d in king) {
+    //     console.log(king[d]);
+    // }
+
+
+
+
+    // Main Example by mr bean :- 3
+
+
+    const companies = [
+        { name: "company one", category: "finanace", start: 1981, end: 2003 },
+        { name: "company Two", category: "Retail", start: 1992, end: 2008 },
+        { name: "company Three", category: "Auto", start: 1999, end: 2007 },
+        { name: "company Four", category: "Retail", start: 1989, end: 2010 },
+        { name: "company Five", category: "Technology", start: 2009, end: 2014 },
+        { name: "company Six", category: "Finanace", start: 1987, end: 2010 },
+        { name: "company Seven", category: "Auto", start: 1986, end: 1996 },
+        { name: "company Eight", category: "Technology", start: 2011, end: 2016 },
+        { name: "company Nine", category: "Retail", start: 1981, end: 1989 },
+    ];
+
+    const ages = [33, 12, 20, 16, 05, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
+
+
+
+    // For Loop :-
+
+    // for (let i=0; i<companies.length; i++)
+    // {
+    //     console.log(companies[i]);
+    // }
+
+
+
+
+    // For Each Loop :-
+
+    // companies.forEach(function (company) {
+    //     // console.log(companies);
+    //     console.log(company);
+    // });
+
+    // companies.forEach(function (company) {
+    //     console.log(company.name);
+    // });
+
+    // companies.forEach(function(company){
+    //     console.log(company.category);
+    // });
+
+    // companies.forEach(function(company){
+    //     console.log(company.start);
+    // });
+
+    // companies.forEach(function(company){
+    //     console.log(company.end);
+    // });
+
+
+
+
+    // * Filter :-
+
+    // let candrink = [];
+    // for (let i = 0; i < ages.length; i++) {
+    //     if (ages[i] >= 21) {
+    //         candrink.push(ages[i]);
+    //     }
+    // }
+    // console.log(candrink);
+
+
+    // const candrink = ages.filter(function(age){if(age>21){return true;}});
+    // console.log(candrink);
+
+
+
+
+    // * By using array Method :-
+
+    // const candrink = ages.filter(age => age >= 21);
+    // console.log(candrink);
+
+    // const retailcompanies = companies.filter(function(company){
+    //     if(companies.category === 'Retail'){
+    //         return true;
+    //     }
+    // });
+    // console.log(retailcompanies);
+
+
+
+
+
+
+    // * By using arrow function :-
+
+    // const retailcompanies = companies.filter(company => company.category === 'Retail');
+    // console.log(retailcompanies);
+
+
+
+
+    // * Get 80s Company :-
+
+    // const eightiescompanies = companies.filter(company => (company.end >=1980 && company.start <1990));
+    // console.log(eightiescompanies);
+
+
+
+
+    // * Get company lasted ten years :-
+
+    // const lastedtenyears = companies.filter(company => (company.end - company.start >=10));
+    // console.log(lastedtenyears);
+
+
+
+
+    // * Map :-
+
+    // => Create array of company names :-
+
+    // const companyname = companies.map(function(company){
+    //     return company.name;
+    // });
+    // console.log(companyname);
+
+
+    // => Create array of 1 :-
+
+    // const test = companies.map(function(company){
+    //     return 1;
+    // });
+    // console.log(test);
+
+
+    // const testmap = companies.map(function (company) {
+    //     return `${company.name} [${company.start} - ${company.end}]`
+    // });
+    // console.log(testmap);
+
+
+
+    // * -------------------------------------------Lecture 17 :- 23-03-23------------------------------------------
+
+    
+
+    // const agesquare = ages.map(age => Math.sqrt(age));
+    // console.log(agesquare);
+
+    // const agestimestwo = ages.map(age => age*2);
+    // console.log(agestimestwo);
+
+    // const agemap = ages.map (age => Math.sqrt(age)).map(age => age*2);
+    // console.log(agemap);
+
+
+
+
+
+
+    // * Sort :-
+
+    // const sortedcompanies = companies.sort(function (c1, c2) {
+    //     if (c1.start > c2.start) {
+    //         return 1;
+    //     }
+    //     else {
+    //         return -1;
+    //     }
+    // });
+    // console.log(sortedcompanies);
+
+
+    // const sortedcompanies = companies.sort((a, b) => (a.start > b.start ? 1 : -1));
+    // console.log(sortedcompanies);
+
+
+
+
+
+
+    // * Sortages :-
+
+    // => Assending Order :- (25, 29, 30)
+
+    const Sortages = ages.sort();
+    console.log(Sortages);
+
+    // const Sortages = ages.sort ((a, b) => a-b);
+    // console.log(Sortages);
+
+
+
+
+    // => Decsending Order :- (81, 80, 79)
+
+    // const Sortages = ages.sort ((a, b) => b-a);
+    // console.log(Sortages);
+
+
+
+
+
+
+
+    // * Reduce :-
+
+    // let agesum = 0;
+    // for (let i = 0; i < ages.length; i++) {
+    //     agesum = agesum + ages [i];
+    // }
+    // console.log(agesum);
+
+
+
+
+
+    // * Adding by reduce :-
+
+    // const agesum = ages.reduce (function (total, age) {
+    //     return total + age;
+    // }, 0);
+    // console.log(agesum);
+
+
+    // const agesum = ages.reduce((total, age) => total + age, 0);
+    // console.log(agesum);
+
+
+
+
+
+
+    // => Get total years for each companies :-
+
+    // const totalyears = companies.reduce(function(total, company){
+    //     return total + (company.end - company.start);
+    // }, 0);
+    // console.log(totalyears);
+
+    // const totalyears = companies.reduce ((total, company) => total + (company.end - company.start), 0);
+    // console.log(totalyears);
+
+
+
+
+
+
+
+    // * Combine Method :-
+
+    // const combined = ages.map(age => age * 2)
+    //     .filter(age => age >= 40)
+    //     .sort((a, b) => a - b)
+    //     .reduce((a, b) => a + b, 0);
+
+    // console.log(combined);
+
+
+</script>

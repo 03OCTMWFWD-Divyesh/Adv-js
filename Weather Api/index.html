@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Api (09-06-23)</title>
+    <style>
+        #weather {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="weather">
+        <input type="text" name="" id="city">
+        <button onclick="weatherBalloon()">Check weather</button>
+        <p>weather : <span id="sky"></span></p>
+
+        <br>
+
+        <p>temp : <span id="temp"></span></p>
+        <!-- <p>min-temp : <span id="min-temp"></span></p> -->
+        <p>feels like : <span id="feels_like"></span></p>
+        <p>humidity : <span id="humidity"></span></p>
+        <!-- <p>max-temp : <span id="max-temp"></span></p> -->
+
+        <br>
+
+        <p>sunrise : <span id="sunrise"></span></p>
+        <p>sunset : <span id="sunset"></span></p>
+
+        <br>
+
+        <p>wind speed : <span id="windspeed"></span></p>
+    </div>
+</body>
+
+</html>
+
+
+<script lang="text/javascript">
+    function weatherBalloon() {
+        var key = '991f23912cbd0e195bf9f2c903c8b293';
+        let city = document.getElementById("city").value
+        console.log(city)
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=991f23912cbd0e195bf9f2c903c8b293&units=metric`)
+            .then(function (resp) { return resp.json() }) // Convert data to json
+            .then(function (data) {
+                let timezone = data.timezone;
+                let sunrise = data.sys.sunrise
+                let sunset = data.sys.sunset
+                console.log(data);
+                document.getElementById("temp").innerHTML = (data.main.temp);
+                // document.getElementById("max-temp").innerHTML = (data.main.temp_max);
+                document.getElementById("feels_like").innerHTML = (data.main.feels_like);
+                document.getElementById("humidity").innerHTML = (data.main.humidity);
+                // document.getElementById("min-temp").innerHTML = (data.main.temp_min)
+                document.getElementById("sunrise").innerHTML = new Date((timezone + sunrise) * 1000).toUTCString().slice(16, 25)
+                // new Date((timezone+sunrise)*1000).toUTCString()
+                document.getElementById("sunset").innerHTML = new Date((timezone + sunset) * 1000).toUTCString().slice(16, 25)
+                document.getElementById("windspeed").innerHTML = (data.wind.speed)
+                document.getElementById("sky").innerHTML = (data.weather[0].description)
+                // console.log(data.main.temp);
+                // console.log(data.main.temp_max);
+                // console.log(data.main.temp_min);
+                // console.log(data.sys.sunrise);
+                // console.log(data.sys.sunset);
+                // console.log(data.weather[0].main);
+                // console.log(data.wind.speed);
+            })
+            .catch(function () {
+                // catch any errors
+            });
+    }
+
+    // window.onload = function () {
+        // weatherBalloon();
+    // }
+
+
+</script>
+
+<script src="script.js"></script>

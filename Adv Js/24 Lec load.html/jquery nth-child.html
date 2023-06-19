@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery tr-nth-child (11-04-23)</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+
+</head>
+<body>
+    <div>
+        <ul>
+            <li>Hello</li>
+            <li>king</li>
+            <li>kohli</li>
+            <li>18</li>
+            <li>Rcb</li>
+        </ul>
+        <ul>
+            <li>kattappa</li>
+            <li>bahubali</li>
+            <li>Dev-sena</li>
+        </ul>
+        <ul>
+            <li>Hello</li>
+            <li>Abd</li>
+            <li>Welcome</li>
+            <li>to</li>
+            <li>india</li>
+        </ul>
+    </div>
+</body>
+</html>
+
+<script>
+    $("ul li:nth-child(2)").css("color","red");
+    $("ul li:nth-child(3)").append("<span>india</span>");
+    // $("ul li:nth-child(last)").append("<span>Dk</span>");
+</script>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript multiple class (25-04-23)</title>
+</head>
+<body>
+    <h1>Multiple class in javascript.</h1>
+</body>
+</html>
+
+
+<script>
+    // * Inheritance :- single level - parent class (super class) --> child class (sub class)
+
+
+    // class Animal{
+    //     constructor(){
+    //         console.log("This is parent class.");
+    //     }
+    // };
+
+    // class Dog extends Animal {
+    //     display(){
+    //         console.log("This is child class.");
+    //     }
+    // };
+    // const obj = new Dog();
+    // obj.display();
+
+
+
+
+
+        // * Multiple level class :-
+
+                 // (1)
+
+        // class Animal {
+        //     sound(){
+        //         console.log("sound");
+        //     }
+        //     sleep(){
+        //         console.log("sleep");
+        //     }
+        // };
+
+        // class Dog extends Animal{
+        //     speak(){
+        //         console.log("Dog speak");
+        //     }
+        //     eat(){
+        //         console.log("eat");
+        //     }
+        // };
+
+        // class petdog extends Dog{
+        //     play(){
+        //         console.log("play");
+        //     }
+        // };
+        // const obj = new petdog();
+        // obj.eat();
+        // obj.sleep();
+        // obj.sound();
+        // obj.speak();
+        // obj.play();
+
+
+
+                // (2)
+        
+        class shape{
+            constructor(name){
+                this.name = name;
+                console.log(name);
+            }
+        };
+
+        class rectangle extends shape{
+            constructor(name, index){
+                super (name);
+                this.index = index;
+            }
+            display(){
+                console.log(`welcome ${this.name} and ${this.index}`);
+            }
+        };
+        const obj = new rectangle ("Ram", 1);
+        obj.display();
+</script>

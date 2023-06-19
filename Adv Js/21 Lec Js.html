@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script (04-04-23)</title>
+</head>
+<body>
+    <h1>Java Script Variables, Keywords, Data types, Selectors or Loop.</h1>
+</body>
+</html>
+
+
+<script>
+
+    // Variables :- Used to state the value in memory and its alphabets and _, $ .
+
+
+
+    // Keywords :- 
+        // (1) Let - Block Scoped.
+        // (2) Const - Block Scoped.
+        // (3) Var - Global Scoped.
+
+
+
+    // Data types :-
+        // (1) Number.
+        // (2) String................... (''), ("") -----> its a string.
+        // (3) Boolean.
+        // (4) null.
+        // (5) undefined.
+        // (6) bigInt.
+        // (7) symbol.
+
+        // ---> Object.
+
+
+
+    // Selectrors :-
+        // (1) getElementById.
+        // (2) getElementByClassName.
+        // (3) querySelector.
+        // (4) querySelectorAll.
+
+
+
+
+
+        // let x = 50;
+        // let 2x = 50;                                    // Not valid.
+        // let _$x = 50;                                   // Valid.
+
+
+
+
+        // const p = document.createElement('p');
+        // document.body.append("This is para");                                   // append -> Tag and element bey create kari dye.
+        // document.body.append('p')
+        // document.body.append("p")
+        // document.body.append(p)
+
+        // document.body.appendChild(p);                                           // appendchild -> Khali tag j create kari dye element na kari dye.
+        // document.body.appendChild("This is pr");
+        // p.textContent = "Hello";
+        // console.log(p);
+
+
+
+
+        // let arr = ["apple", "orange", "mango"];
+        // console.log(typeof(arr));                                                        // Object.
+        // console.log(arr);
+
+        // let res = arr.unshift("kiwi");                                                 // unshift -> Add kare 1st no. uper.
+        // console.log(res);
+        // console.log(arr);
+
+        // arr.pop();                                                                      // pop -> last varu name delete kari nakhe.
+        // console.log(arr);
+
+        // arr.shift();                                                                    // shift -> 1st name delete kari nakhe.
+        // console.log(arr);
+
+
+
+
+
+
+        // Looping :-
+            // (1) while.
+            // (2) for.
+            // (3) do....while.
+            // (4) for in.
+            // (5) for of. 
+
+
+
+
+
+            // (1) While :-
+                // let i = 0;
+                // let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+                // while(i<arr.length){
+                //     console.log(arr[i]);
+                //     // console.log(arr);
+                //     i = i + 1;
+                // }
+
+
+            // (2) For :-
+                    // let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+                    // for(let i = 0; i<arr.length; i++){
+                    //     console.log(arr[i]);
+                    // }
+
+
+                // (3) do....while :-
+                        // let i = 0;
+                        // let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9,];
+                        // do{
+                        //     console.log(arr[i]);
+                        //     i = i + 1
+                        // }while(i<arr.length);
+
+
+                // While and For Loop :- Entry Controlled Loop.
+
+
+
+
+                    // While Loop :-
+                            // let i = 10;
+                            // while(i<10){
+                            //     // console.log("Hello");
+                            //     console.log(i);
+                            // }
+
+
+
+                // do...while loop :-Exit Controlled Loop.
+
+                    // do..while loop :-
+                                // let i = 10;
+                                // do{
+                                //     console.log(i);
+                                //     console.log("Hello");
+                                // }while(i<10);
+
+
+
+
+
+
+                // let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+                // for(let i = 0; i<arr.length; i++){
+                //     if(i%2 ==0)
+                //     {
+                //         console.log(arr[i]);
+                //         console.log(i);
+                //     }
+                // }
+
+
+
+                // for (let i = 0; i<5; i++)
+                // {
+                //     for (let j = 0; j<5; j++)
+                //     {
+                //         console.log("*");
+                //     }
+                //     console.log("\n");
+                // }
+
+
+
+
+                // * Web APIS :- Application programming interface.
+                // * REST APi :- Representational state transfer.
+
+
+
+
+                // * Function :- set of intruction. predefined, userdefined.
+                
+                // Predefined :- Pelethi banelu.
+                // userdefined :- 
+                    // (1) Normal function.
+                    // (2) callback function.
+                    // (3) Arrow function.
+
+
+
+
+                    // (1) Normal function :-
+                        // function helloworld (name,dlg)
+                        // {
+                        //     console.log(`your name is ${name} main ${dlg}`);
+                        // }
+                        // helloworld("puspa", "bhau");
+
+
+
+                    // (2) Callback function :- 
+                            // const prop = function (name, age)
+                            // {
+                            //     console.log(`welcome ${name} your age is ${age}`);
+                            // }
+                            // prop("king", "34");
+
+
+
+                    // (3) Arrow function :-
+                                // const res = (name, age) => console.log(`welcome ${name} your age is ${age}`);
+                                // res("king", "18");
+
+
+</script>

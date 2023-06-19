@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java DOM Task (01-04-23)</title>
+</head>
+
+<body>
+    <h1>DOM (Document Object Model) Task For JS</h1>
+    <ul id="item">
+
+    </ul>
+</body>
+
+</html>
+
+<script>
+
+    // let div = document.createElement('div');
+    // document.body.appendChild(div);
+
+    // for (let i = 0; i<5; i++){
+    //     let child = document.createElement("div");
+    //     div.appendChild(child);
+    //     child.textContent = "Hello DOM";
+    //     child.style.textAlign = "center";
+    // }
+
+
+
+   // * DOM Creat By Function :-
+
+   function creatitem (name){
+    let li = document.createElement('li');
+    li.textContent = name;
+    return li;
+   }
+
+
+   // Appendchild :-
+
+   const item = document.querySelector('#item');
+   item.appendChild (creatitem ('Home'));
+   item.appendChild (creatitem('Services'));
+   item.appendChild (creatitem ('About Us'));
+
+   
+
+   // Removechild :-
+
+   let x = document.getElementById("item");
+   x.removeChild(x.childNodes[1]);
+   console.log(x);
+
+
+</script>

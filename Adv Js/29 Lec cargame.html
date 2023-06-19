@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript Car Game (22-04-23)</title>
+</head>
+
+<body>
+    <h1>1. use a constructor function to implement a car.</h1>
+    <h2>A car has a make and a speed property.</h2>
+    <h2>The speed property is the current speed of the car in km/h.</h2>
+    <h1>2. Implement an 'Acceleter' method that will increase the car's speed by 10, and log the new speed to the
+        console.</h1>
+    <h1>3. Implement a 'Brake' method that will decrease the car's speed by 5, and log the new speed to the console.
+    </h1>
+    <h1>3. Create 2 car objects and experiment with calling 'Accelerate' and 'Brake' multiple times on each of them.
+    </h1>
+
+    <h2>DATA CAR 1 :- 'BMW' going at 120 km/h.</h2>
+    <h2>DATA CAR 2 :- 'audi' going at 100 km/h. </h2>
+</body>
+
+</html>
+
+
+<script>
+    // prototypes :- ES5
+
+
+    const car = function (make, speed) {
+        this.make = make;
+        this.speed = speed;
+    };
+    car.prototype.accelater = function () {
+        this.speed += 10;
+        console.log(`${this.make} is going at ${this.speed} km/h`);
+    };
+
+    car.prototype.brake = function () {
+        this.speed -= 5;
+        console.log(`${this.make} is going at ${this.speed} km/h`);
+    };
+
+    const bmw = new car("BMW", 120);
+    const mercedes = new car("Mecedes", 95);
+
+    bmw.accelater();
+    bmw.accelater();
+    bmw.brake();
+    bmw.accelater();
+    mercedes.accelater();
+    mercedes.accelater();
+    mercedes.brake();
+    mercedes.accelater();
+    mercedes.accelater();
+    mercedes.accelater();
+    mercedes.accelater();
+    mercedes.accelater();
+</script>

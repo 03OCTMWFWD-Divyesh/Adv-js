@@ -3,7 +3,7 @@
 class User {
     name;
     email;
-    #password;
+    #password;                                                                  // # private kare che and te encapsulation che.
     constructor(){
         console.log("This is default constructor");
     }
@@ -16,7 +16,7 @@ class User {
     signUp(name,email,password){
         let isValidate = false;
         isValidate = this.#validatePassword (password);
-        isValidate &&= this.#validateEmail (email);
+        isValidate &&= this.#validateEmail (email);                              // &&=  ---> Logical and assignment operator che.
         if(isValidate){
             this.name = name;
             this.email = email;

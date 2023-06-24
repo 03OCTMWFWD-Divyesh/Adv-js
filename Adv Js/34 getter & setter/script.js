@@ -65,7 +65,7 @@
 
 // (1)
 
-class user {
+class User {
     #password;
     constructor(email, password) {
         this.email = email;
@@ -73,7 +73,7 @@ class user {
     }
 
     login(email, password) {
-        if (email === this.email && password === this.password) {
+        if (email === this.email && password === this.#password) {
             console.log("Login Successfully");
         } else {
             console.log("Login Failed");
@@ -92,7 +92,7 @@ class user {
 
 // (2)
 
-class author extends user {
+class Author extends User {
     #numofpost;
     constructor(email, password) {
         super(email, password);
@@ -112,7 +112,7 @@ class author extends user {
 
 // (3)
 
-class admin extends user {
+class Admin extends User {
     constructor(email, password) {
         super(email, password);
     }
@@ -125,26 +125,29 @@ class admin extends user {
 
 //(1)
 
-// const king = new user ("king@gmail.com", "password");
-// king.login("king@gmail.com", "password");
+const obj = new User ("king@gmail.com", "123456");
+obj.login("king@gmail.com", "123456");
+obj.logout();
 
 
 // (2)
 
-// const king = new author ("king@gmail.com", "password");
-// king.login("king@gmail.com", "password");
-// king.createpost('i hope you are enjoying this 100.');
-// king.createpost('i am king....');
-// console.log(king.getnumofpost());
+const king = new Author ("king18@gmail.com", "1818");
+king.login("king18@gmail.com", "1818");
+king.createpost('i hope you are enjoying this 100.');
+king.createpost('i am king....');
+console.log(king.getnumofpost());
+king.logout();
 
 
 // (3)
 
-const king = new admin('king@gmail.com', '[object] [object]');
-king.login('king@gmail.com', '[object] [object]');
-king.resetpassword('{id : 1 }');
-king.login('king@gmail.com', '{id : 1 }');
-king.removeuser(12);
+const admin = new Admin('king@gmail.com', '4143');
+admin.login('king@gmail.com', '4143');
+admin.resetpassword('3579');
+admin.login('king@gmail.com', '3579');
+admin.removeuser();
+admin.logout();
 
 
 

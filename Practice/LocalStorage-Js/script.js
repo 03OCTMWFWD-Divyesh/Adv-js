@@ -51,6 +51,35 @@
 
 
 
+// (3) Html Form Data Clear :-
+
+// document.getElementById ('login').addEventListener ('click', (e) => {
+//     e.preventDefault();
+//     let username = document.getElementById ('username').value;
+//     let password = document.getElementById ('password').value;
+
+//     // * Object Literal :
+//     let user = {
+//         username : username,
+//         password : password
+//     }
+
+//     localStorage.setItem ('user', JSON.stringify (user))
+//     console.log(JSON.stringify(user));
+
+//     alert("Data submitted successfully");
+// });
+
+// document.getElementById ('clear').addEventListener ('click', () => {
+//     localStorage.removeItem ('username');
+//     localStorage.removeItem ('password');
+// });
+
+
+
+
+
+
 
 
 

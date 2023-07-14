@@ -80,7 +80,34 @@
 
 
 
+// (4) Html Data again seen by JSON :-
 
+if (localStorage.getItem ('user')){
+    let obj = JSON.parse (localStorage.getItem ('user'));
+    document.getElementById ('username').value = obj.username;
+    document.getElementById ('password').value = obj.password;
+};
+
+document.getElementById ('login').addEventListener ('click', (e) => {
+    e.preventDefault();
+    let username = document.getElementById ('username').value;
+    let password = document.getElementById ('password').value;
+
+    let user = {
+        username : username,
+        password : password
+    }
+
+    localStorage.setItem ('user', JSON.stringify (user));
+    console.log(JSON.stringify(user));
+
+    alert ("Data Submitted Successfully");
+});
+
+document.getElementById (clear).addEventListener ('click', () => {
+    localStorage.removeItem ('username');
+    localStorage.removeItem ('password');
+});
 
 
 

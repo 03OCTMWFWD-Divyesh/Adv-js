@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validate (16-07-23)t</title>
+    <style>
+        #form {
+            text-align: center;
+            padding-top: 70px;
+            /* background-color: blue; */
+        }
+
+        span {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <form action="" id="form" onsubmit="event.preventDefault();">
+        <label for="fullName">Full Name :-</label> <br>
+        <input type="text" name="fullname" id="fullName" placeholder="Enter Your Name">
+        <span id="fullNameError"></span><br><br>
+
+        <label for="password">Password :-</label><br>
+        <input type="password" name="password" id="password" placeholder="*******">
+        <span id="passError"></span><br><br>
+
+        <label for="confirmPassword">Confirm Password :-</label><br>
+        <input type="password" name="confirmPassword" id="confirmPassword" placeholder="*******">
+        <span id="confirmPassError"></span><br><br>
+
+        <input type="submit" value="Submit" onclick="Validate()">
+        <input type="reset" value="Reset">
+    </form>
+
+    <script>
+
+        function Validate() {
+            let name = document.getElementById("fullName").value
+            let pass = document.getElementById("password").value
+            let cpass = document.getElementById("confirmpassword").value
+
+            if (isNaN(name)) {
+                document.getElementById("fullNameError").innerHTML = "Okay"
+            } else{
+                document.getElementById("fullNameError").innerHTML = "Plzzz valide your name"
+            }
+
+            if(pass === cpass){
+                document.getElementById ("passError").innerHTML = "Done"
+                document.getElementById ("confirmPassError").innerHTML = "Done"
+            } else{
+                document.getElementById ("passError").innerHTML = "pass not match"
+                document.getElementById ("confirmPassError").innerHTML = "pass not match"
+            }
+        }
+
+    </script> -->
+
+
+    <form action="" id="form" onsubmit="event.preventDefault();">
+        <label for="fullName">Full Name :-</label><br>
+        <input type="text" name="fullName" id="fullName" placeholder="******"><br>
+        <span id="fullNameError"></span><br><br>
+
+        <label for="password">password :-</label><br>
+        <input type="password" name="password" id="password" placeholder="******"><br>
+        <span id="passError"></span><br><br>
+
+        <label for="cPass">Confirm Pass :-</label><br>
+        <input type="password" name="cPass" id="cPass" placeholder="******"><br>
+        <span id="cPassError"></span><br><br>
+
+        <input type="submit" value="Submit" onclick="Validate()">
+        <input type="reset" value="Reset">
+    </form>
+
+    <script>
+        function Validate() {
+            let name = document.getElementById("fullName").value
+            let pass = document.getElementById("password").value
+            let cPass = document.getElementById("cPass").value
+
+            if (isNaN(name)) {
+                document.getElementById("fullNameError").innerHTML = "Okay"
+            } else {
+                document.getElementById("fullNameError").innerHTML = "Plzzzz Valide Name"
+            }
+
+            if (pass === cPass) {
+                document.getElementById("passError").innerHTML = "Done"
+                document.getElementById("cPassError").innerHTML = "Done"
+            } else {
+                document.getElementById("passError").innerHTML = "Pass Don't Match"
+                document.getElementById("cPassError").innerHTML = "Pass Don't Match"
+            }
+        }
+    </script>
+</body>
+
+</html>

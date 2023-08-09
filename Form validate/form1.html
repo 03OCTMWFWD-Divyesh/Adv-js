@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        fieldset {
+            margin: 0 auto;
+            width: 50%;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Enter details for Subscription<br>(Form Validation JS)</h1>
+        <br>
+        <hr><br>
+        <fieldset>
+            <legend>About you</legend>
+            <table>
+                <tr>
+                    <td><label for="name">Name* :</label></td>
+                    <td><input type="text" name="uname" id="uname" title="uname" placeholder="Enter your name here"
+                            onkeypress="alphachk(this, 'name_error')" onblur="valid_name()"><span
+                            id="name_error"></span></td>
+                </tr>
+                <tr>
+                    <td><label for="name">Age* :</label></td>
+                    <td><input type="number" name="age" id="age" placeholder="Enter your age here"
+                            onkeypress="numchk(this,'age_error')" onblur="valid_age()"><span id="age_error"></span></td>
+                </tr>
+                <tr>
+                    <td><label for="name">Email id* :</label></td>
+                    <td><input type="email" name="email" id="email" title="email" placeholder="Enter your email id here"
+                            onkeypress="emailchk(this,'email_error')" onblur="valid_email()"><span
+                            id="email_error"></span></td>
+                </tr>
+                <tr>
+                    <td><label for="name">Password* :</label></td>
+                    <td><input type="password" name="password" id="password" title="password"
+                            placeholder="Enter your password here" onkeypress="pswdchk(this,'pass_error')"
+                            onblur="valid_password()"><span id="pass_error"></span></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button><a href="form1.html">Reset</a></button>
+                        <input type="submit" name="submit" id="submit" onclick="submit(this)"><span
+                            id="required"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <p>* - fields are mandatory</p>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+</body>
+
+</html>
+
+
+<script>
+
+
+    function valid_name() {
+        let username = document.getElementById('uname').value;
+        if (username == "") {
+            document.getElementById('name_error').innerText = "*Please Enter Your name"
+            document.getElementById('name_error').style.color = 'red'
+            document.getElementById('uname').style.backgroundColor = 'lightblue'
+        } else {
+            document.getElementById('name_error').innerText = ""
+            document.getElementById('uname').style.backgroundColor = 'white'
+        }
+    }
+
+    function valid_age() {
+        let userage = document.getElementById('age').value;
+        if (userage == "") {
+            document.getElementById('age_error').innerText = "*Please Enter Your Age"
+            document.getElementById('age_error').style.color = 'red'
+            document.getElementById('age').style.backgroundColor = 'lightblue'
+        } else {
+            document.getElementById('age_error').innerText = ""
+            document.getElementById('age').style.backgroundColor = 'white'
+        }
+    }
+
+    function valid_email() {
+        let userid = document.getElementById('email').value;
+        if (userid == "") {
+            document.getElementById('email_error').innerText = "*Please Enter Your Email ID"
+            document.getElementById('email_error').style.color = 'red'
+            document.getElementById('email').style.backgroundColor = 'lightblue'
+        } else {
+            document.getElementById('email_error').innerText = ""
+            document.getElementById('email').style.backgroundColor = 'white'
+        }
+    }
+
+    function valid_password() {
+        let userpass = document.getElementById('password').value;
+        if (userpass == "") {
+            document.getElementById('pass_error').innerText = "*Please Enter Your Password"
+            document.getElementById('pass_error').style.color = 'red'
+            document.getElementById('password').style.backgroundColor = 'lightblue'
+        } else {
+            document.getElementById('pass_error').innerText = ""
+            document.getElementById('password').style.backgroundColor = 'white'
+        }
+    }
+
+    function alphachk(e, spnid) {
+        var name = /^[a-zA-Z ]+$/;
+        if (name.test(e.value)) {
+            document.getElementById(spnid).innerText = ""
+        }
+        else {
+            document.getElementById(spnid).innerText = "*Required Character Only"
+            document.getElementById(spnid).style.color = "blue"
+        }
+    }
+    function numchk(e, spnid) {
+        var age = /^[0-9]{0,1}$/
+        if (age.test(e.value)) {
+            document.getElementById(spnid).innerText = ""
+        }
+        else {
+            document.getElementById(spnid).innerText = "*Required Age Only"
+            document.getElementById(spnid).style.color = "blue"
+        }
+    }
+    function emailchk(e, spnid) {
+        var id = /^([a-z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z]{2,4})+$/;
+        if (id.test(e.value)) {
+            document.getElementById(spnid).innerText = ""
+        }
+        else {
+            document.getElementById(spnid).innerText = "*Required Email ID Only"
+            document.getElementById(spnid).style.color = "blue"
+        }
+    }
+    function pswdchk(e, spnid) {
+        var pass = /^[a-zA-z0-9._-]{8,16}$/;
+        if (pass.test(e.value)) {
+            document.getElementById(spnid).innerText = ""
+        }
+        else {
+            document.getElementById(spnid).innerText = "*Required Password Only"
+            document.getElementById(spnid).style.color = "blue"
+        }
+    }
+
+
+
+
+    function submit() {
+        let username = document.getElementById('uname').value;
+        let userage = document.getElementById('age').value;
+        let userid = document.getElementById('email').value;
+        let userpass = document.getElementById('password').value;
+        if (username == "") {
+            document.getElementById('required').innerText = "Please fill (*) Required fields"
+        }
+        else if (userage == "") {
+            document.getElementById('required').innerText = "Please fill (*) Required fields"
+        }
+        else if (userid == "") {
+            document.getElementById('required').innerText = "Please fill (*) Required fields"
+        }
+        else if (userpass == "") {
+            document.getElementById('required').innerText = "Please fill (*) Required fields"
+        }
+        else {
+            document.getElementById('required').innerText = ""
+        }
+    }
+
+
+
+            // ONE FOR All input
+
+    // function validate(e, name_error){
+    //     if (e.value == "") {
+    //         document.getElementById('name_error').innerText = "*Mandatory"
+    //     } else {
+    //         document.getElementById('name_error').innerText = ""
+    //     }
+    // }
+
+
+</script>

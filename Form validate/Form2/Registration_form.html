@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOPS Registration page</title>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            width: 70%;
+            margin: 0 auto;
+            background-color: lightgray;
+        }
+
+        table,
+        td {
+            font-size: 25px;
+            padding: 20px 10px;
+        }
+        span{
+            color: tomato;
+            font-size: 20px;
+        }
+        button{
+            padding: 10px 30px;
+            margin-right: 40px;
+        }
+        #login{
+            background-color: aquamarine;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            display: inline-block;
+        }
+        #login a{
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>TOPS Student Registration Form</h1>
+    <hr>
+    <div class="container">
+        <fieldset>
+            <table>
+                <tr>
+                        <td><label for="name">Name : </label></td>
+                        <td><input type="text" name="name" id="name" placeholder="Enter your name here"><span id="name_error"></span>
+                            </td>
+                    </tr>
+                <tr>
+                    <td><label for="email">Email : </label></td>
+                    <td><input type="email" name="email" id="email" placeholder="Enter your email here"><span
+                            id="email_error"></span>
+                    </td>
+                </tr>
+                <tr>
+                        <td><label for="pass1">Password : </label></td>
+                        <td><input type="password" name="pass1" id="pass1" placeholder="Enter your Password"><span id="pass1_error"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="pass2">Confirm Password : </label></td>
+                        <td><input type="password" name="pass2" id="pass2" placeholder="Confirm your Password"><span id="pass2_error"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="mobile">Mobile no. : </label></td>
+                        <td><input type="tel" name="mobile" id="mobile" placeholder="Enter your mobile here"><span id="mob_error"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="gender">Gender : </label></td>
+                        <td>
+                            <input type="radio" name="gender" title="gender" class="gender"><label for="gender">Male</label>
+                            <input type="radio" name="gender" title="gender" class="gender"><label for="gender">Female</label>
+                        </td>
+                    </tr>
+                <tr>
+                    <td colspan="2">
+                        <button type="reset"><a href="Registration_form.html">Reset</a></button>
+                        <button onclick="display()" id="submit">Submit</button>
+                        <button type="button" id="login"><a href="login_form.html">Login Form</a></button>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+</body>
+
+</html>
+
+<script>
+
+    function display() {
+        let nm = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let pass1 = document.getElementById("pass1").value;
+        let pass2 = document.getElementById("pass2").value;
+        let mob = document.getElementById("mobile").value;
+        let gen = document.getElementsByClassName("gender").value;
+
+        if (isNaN(nm)) {
+            document.getElementById("name_error").innerHTML = ""
+            document.getElementById("name").style.borderBottomColor = "black"
+        } else {
+            document.getElementById("name_error").innerHTML = " required"
+            document.getElementById("name").style.borderBottomColor = "red"
+        }
+
+        if (email.indexOf('@') >= 0) {
+            document.getElementById("email_error").innerHTML = ""
+            document.getElementById("email").style.borderBottomColor = "black"
+        } else {
+            document.getElementById("email_error").innerHTML = " '@' required"
+            document.getElementById("email").style.borderBottomColor = "red"
+        }
+
+        if (pass1 == pass2) {
+            document.getElementById("pass2_error").innerHTML = ""
+            document.getElementById("pass2").style.borderBottomColor = "black"
+        } else {
+            document.getElementById("pass2_error").innerHTML = " Password doesn't match"
+            document.getElementById("pass2").style.borderBottomColor = "red"
+        }
+
+        if (isNaN(mob)) {
+            document.getElementById("mob_error").innerHTML = " Numbers only required"
+            document.getElementById("mobile").style.borderBottomColor = "red"
+        } else {
+            document.getElementById("mob_error").innerHTML = ""
+            document.getElementById("mobile").style.borderBottomColor = "black"
+        }
+    }
+</script>
